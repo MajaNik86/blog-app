@@ -8,7 +8,7 @@ export default function MainNavigation() {
             <nav className={classes.nav}>
                 <ul>
                     <li>
-                        <NavLink to='/posts' activeClassName={classes.active}>Posts</NavLink>
+                        <NavLink to='/posts' activeClassName={classes.active}>AppPosts</NavLink>
                     </li>
                 </ul>
             </nav>

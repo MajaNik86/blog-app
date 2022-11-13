@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Layout from "./layouts/layout";
-import Posts from "./pages/Posts";
+import AppPosts from "./pages/AppPosts";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
             <Redirect to='/posts'></Redirect>
           </Route>
           <Route path='/posts'>
-            <Posts />
+            <AppPosts />
           </Route>
         </Switch>
       </Layout>
