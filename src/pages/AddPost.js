@@ -24,11 +24,19 @@ export default function AddPost() {
         history.push('/posts');
     }
 
+    const handleReset = () => {
+        setNewPost({
+            title: '',
+            text: '',
+        })
+    }
+
     return <div><h2>Add New Post:</h2>
         <AddPostForm
             newPost={newPost}
             setNewPost={setNewPost}
-            onChange={handleSubmit} />
+            onChange={handleSubmit}
+            onReset={handleReset} />
     </div>
 
 }
