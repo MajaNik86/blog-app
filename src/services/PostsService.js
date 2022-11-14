@@ -13,7 +13,6 @@ class PostsService {
         } catch (error) {
             console.log(error);
         }
-        return null;
     }
 
     async add(newPost) {
@@ -23,9 +22,19 @@ class PostsService {
         } catch (error) {
             console.log(error);
         }
-        return null;
+    }
+
+    async edit(id, newPost) {
+        try {
+            const { data } = await axiosInstance.put(`posts/${id}`, newPost);
+            return data;
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
 
 
 export default new PostsService();
+
+

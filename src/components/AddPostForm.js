@@ -2,11 +2,11 @@ import React from "react";
 import classes from './AddForm.module.css';
 
 
-export const AddPostForm = ({ newPost, setNewPost, onChange, onReset }) => {
+export const AddPostForm = ({ newPost, setNewPost, onSubmit, onReset }) => {
 
     return (
         <div>
-            <form className={classes.form} onSubmit={onChange}>
+            <form className={classes.form} onSubmit={onSubmit}>
                 <div className={classes.control}>
                     <label htmlFor="title">Title:</label>
                     <input
@@ -41,6 +41,11 @@ export const AddPostForm = ({ newPost, setNewPost, onChange, onReset }) => {
                 <div className={classes.actions}>
                     <button type="button" onClick={onReset}>
                         Reset
+                    </button>
+                </div>
+                <div className={classes.actions}>
+                    <button type="button" onClick={onSubmit}>
+                        Edit
                     </button>
                 </div>
             </form>
