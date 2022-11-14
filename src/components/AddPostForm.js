@@ -10,6 +10,8 @@ export const AddPostForm = ({ newPost, setNewPost, onChange, onReset }) => {
                 <div className={classes.control}>
                     <label htmlFor="title">Title:</label>
                     <input
+                        required
+                        minLength='2'
                         type="text"
                         id="title"
                         value={newPost.title}
@@ -21,6 +23,8 @@ export const AddPostForm = ({ newPost, setNewPost, onChange, onReset }) => {
                 <div className={classes.control}>
                     <label htmlFor="text">Text:</label>
                     <input
+                        required
+                        maxLength='300'
                         type="text"
                         id="text"
                         value={newPost.text}
