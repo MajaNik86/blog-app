@@ -10,6 +10,9 @@ export default function MainNavigation() {
                     <li>
                         <NavLink to='/posts' activeClassName={classes.active}>AppPosts</NavLink>
                     </li>
+                    <li>
+                        <NavLink to='/add' activeClassName={classes.active}>Add Post</NavLink>
+                    </li>
                 </ul>
             </nav>
         </header>

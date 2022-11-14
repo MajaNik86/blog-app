@@ -1,7 +1,9 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Layout from "./layouts/layout";
+import AddPost from "./pages/AddPost";
 import AppPosts from "./pages/AppPosts";
+import SinglePost from "./pages/SinglePost";
 
 function App() {
   return (
@@ -13,6 +15,12 @@ function App() {
           </Route>
           <Route path='/posts'>
             <AppPosts />
+          </Route>
+          <Route path='/add'>
+            <AddPost />
+          </Route>
+          <Route exact path='/post/:id'>
+            <SinglePost />
           </Route>
         </Switch>
       </Layout>
