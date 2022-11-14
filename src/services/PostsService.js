@@ -13,7 +13,7 @@ class PostsService {
         } catch (error) {
             console.log(error);
         }
-        return {};
+        return null;
     }
 
     async add(newPost) {

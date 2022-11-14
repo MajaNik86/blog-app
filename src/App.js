@@ -13,13 +13,13 @@ function App() {
           <Route path='/' exact>
             <Redirect to='/posts'></Redirect>
           </Route>
-          <Route path='/posts'>
+          <Route exact path='/posts'>
             <AppPosts />
           </Route>
           <Route path='/add'>
             <AddPost />
           </Route>
-          <Route exact path='/post/:id'>
+          <Route path='/posts/:id'>
             <SinglePost />
           </Route>
         </Switch>

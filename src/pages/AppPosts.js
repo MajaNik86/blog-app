@@ -19,7 +19,7 @@ export default function AppPosts() {
         <div>
             <h3>List of posts:</h3>
             <ul>
-                {posts && posts.map((post) => (<li key={post.id}>{post.title} <Link to='/posts/:id'>View Post</Link> </li>))}
+                {posts && posts.map((post) => (<li key={post.id}>{post.title} <Link to={`/posts/${post.id}`}>View Post</Link> <Link to='/edit/:id'>Edit</Link> </li>))}
             </ul>
         </div>)
 }
