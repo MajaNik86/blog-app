@@ -46,6 +46,7 @@ export default function AddPost() {
         <div>
             <h2>Add New Post:</h2>
             <AddPostForm
+                id={id}
                 newPost={newPost}
                 setNewPost={setNewPost}
                 onReset={handleReset}

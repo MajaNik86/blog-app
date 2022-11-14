@@ -2,7 +2,7 @@ import React from "react";
 import classes from './AddForm.module.css';
 
 
-export const AddPostForm = ({ newPost, setNewPost, onSubmit, onReset }) => {
+export const AddPostForm = ({ id, newPost, setNewPost, onSubmit, onReset }) => {
 
     return (
         <div>
@@ -34,18 +34,11 @@ export const AddPostForm = ({ newPost, setNewPost, onSubmit, onReset }) => {
                     />
                 </div>
                 <div className={classes.actions}>
-                    <button className="btn" type="submit">
-                        Add Post
-                    </button>
+                    <button type="submit">{id ? 'Edit' : "Add Post"}</button>
                 </div>
                 <div className={classes.actions}>
                     <button type="button" onClick={onReset}>
                         Reset
-                    </button>
-                </div>
-                <div className={classes.actions}>
-                    <button type="button" onClick={onSubmit}>
-                        Edit
                     </button>
                 </div>
             </form>

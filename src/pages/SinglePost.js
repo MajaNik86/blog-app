@@ -22,6 +22,7 @@ export default function SinglePost() {
         <div>
             <SinglePostComponent
                 key={post.id}
+                id={post.id}
                 title={post.title}
                 text={post.text}
             />
