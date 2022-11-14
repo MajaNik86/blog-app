@@ -32,6 +32,15 @@ class PostsService {
             console.log(error);
         }
     }
+
+    async delete(id) {
+        try {
+            const { data } = await axiosInstance.delete(`posts/${id}`);
+            return data;
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
 
 
