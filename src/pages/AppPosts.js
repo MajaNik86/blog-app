@@ -17,10 +17,9 @@ export default function AppPosts() {
     }, []);
 
     const handleDelete = async (id) => {
-        const data = await PostsService.delete(id);
-        if (data.count > 0) {
-            setPosts(posts.filter((post) => post.id !== id));
-        }
+        await PostsService.delete(id);
+        setPosts(posts.filter((post) => post.id !== id));
+
     }
 
 
@@ -30,10 +29,17 @@ export default function AppPosts() {
             <ul>
                 {posts && posts.map((post) => (
                     <li key={post.id}>{post.title}
-                        <Link to={`/posts/${post.id}`}>View Post</Link>
-                        <Link to={`/edit/${post.id}`}>Edit</Link>
+                        <div>
+                            {post.comments && post.comments.length ? (
+                                <span>Number of comments: {post.comments.length}</span>
+                            ) : (
+                                <span>No comments</span>
+                            )}
+                        </div>
+                        <Link to={`/posts/${post.id}`}>View Post </Link>
+                        <Link to={`/edit/${post.id}`}> Edit </Link>
                         {/* moram proslediti post.id */}
-                        <button onClick={() => handleDelete(post.id)}>Delete</button>
+                        <button onClick={() => handleDelete(post.id)}> Delete</button>
                     </li>))}
             </ul>
         </div>)

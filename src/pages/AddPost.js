@@ -31,7 +31,7 @@ export default function AddPost() {
         });
     };
 
-    const fetchPost = async () => {
+    const fetchPost = async (id) => {
         const data = await PostsService.get(id);
         setNewPost(data);
     };
